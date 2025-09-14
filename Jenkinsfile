@@ -26,13 +26,23 @@ pipeline {
             }
         }
 
-        stage('Build Networking App') {
-        steps {
-            echo 'Building Go networking application...'
-            // Specify the exact directory of the main package.
-            sh 'go build -o app-networking ./networking-exercise'
+        stage('Lint') {
+            steps {
+                echo 'Running golangci-lint...'
+                // Install the linter.
+                sh 'go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest'
+                // Run the linter on all packages, excluding test files.
+                sh 'golangci-lint run ./... --exclude-use-default --disable-all --enable=gofmt,goimports,revive'
+            }
         }
-    }
+
+        stage('Build Networking App') {
+            steps {
+                echo 'Building Go networking application...'
+                // Specify the exact directory of the main package.
+                sh 'go build -o app-networking ./networking-exercise'
+            }
+        }
 
         stage('Test Networking App') {
             steps {
