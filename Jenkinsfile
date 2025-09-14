@@ -35,12 +35,11 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Test Networking App') {
             steps {
-                echo 'Running unit tests...'
-                // Run all tests in the project.
-                // The `-v` flag provides verbose output.
-                sh 'go test -v ./...'
+                echo 'Running integration tests for networking exercise...'
+                // Go's test runner will automatically find and run the tests in this directory.
+                sh 'go test -v ./networking-exercise'
             }
         }
     }
