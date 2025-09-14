@@ -1,4 +1,4 @@
-package networkingexercise
+package main
 
 import (
 	"fmt"
