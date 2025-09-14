@@ -26,14 +26,13 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                echo 'Building Go application...'
-                // Build the main package.
-                // `sh` step executes a shell command.
-                sh 'go build -o app ./...'
-            }
+        stage('Build Networking App') {
+        steps {
+            echo 'Building Go networking application...'
+            // Specify the exact directory of the main package.
+            sh 'go build -o app-networking ./networking-exercise'
         }
+    }
 
         stage('Test Networking App') {
             steps {
