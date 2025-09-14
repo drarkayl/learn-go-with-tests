@@ -22,7 +22,7 @@ pipeline {
                 // The `git` step checks out the code from the repository.
                 // We'll use the scm shortcut for Multibranch Pipelines.
                 // For a simple pipeline, you can specify the git URL here.
-                git url: 'https://github.com/drarkayl/learn-go-with-tests.git'
+                checkout scm
             }
         }
 
