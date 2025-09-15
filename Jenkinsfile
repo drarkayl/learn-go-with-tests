@@ -29,7 +29,6 @@ pipeline {
         stage('Build Networking App') {
             steps {
                 echo 'Building Go networking application...'
-                // Specify the exact directory of the main package.
                 sh 'go build -o app-networking ./networking-exercise'
             }
         }
@@ -37,7 +36,6 @@ pipeline {
         stage('Test Networking App') {
             steps {
                 echo 'Running integration tests for networking exercise...'
-                // Go's test runner will automatically find and run the tests in this directory.
                 sh 'go test -v ./networking-exercise'
             }
         }

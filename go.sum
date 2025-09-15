@@ -1,5 +1,7 @@
 github.com/approvals/go-approval-tests v0.0.0-20211008131110-0c40b30e0000 h1:H152l3O+2XIXQu8IrqEXeqJOFCvSShUXs7+x0lw8V1k=
 github.com/approvals/go-approval-tests v0.0.0-20211008131110-0c40b30e0000/go.mod h1:PJOqSY8IofNv3heAD6k8E7EfFS6okiSS9bSAasaAUME=
+github.com/go-chi/chi/v5 v5.2.3 h1:WQIt9uxdsAbgIYgid+BpYc+liqQZGMHRaUwp0JUcvdE=
+github.com/go-chi/chi/v5 v5.2.3/go.mod h1:L2yAIGWB3H+phAw1NxKwWM+7eUH/lU8pOMm5hHcoops=
 github.com/gomarkdown/markdown v0.0.0-20240626202925-2eda941fd024 h1:saBP362Qm7zDdDXqv61kI4rzhmLFq3Z1gx34xpl6cWE=
 github.com/gomarkdown/markdown v0.0.0-20240626202925-2eda941fd024/go.mod h1:JDGcbDT52eL4fju3sZ4TeHGsQwhG9nbDV21aMyhwPoA=
 github.com/gorilla/websocket v1.5.3 h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=
